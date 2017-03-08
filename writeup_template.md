@@ -6,7 +6,8 @@
 
 My pipline consists of the following steps:
 * First I convert images to grayscale
-[image1]: ./examples/grayscale.jpg "Grayscale"* Then apply Gaussian blurring on the image to reduce noise in the image. I use a kernal size of 3.
+[image1]: ./examples/grayscale.jpg "Grayscale"
+* Then apply Gaussian blurring on the image to reduce noise in the image. I use a kernal size of 3.
 * The next step I detect the edges in the image using Canny, with a low threshold of 60 and a high of 130.
 * A mask is applied to the detected edges. Currently I am using a fixed mask with vertices at [450,320], [530, 320], and the two edges of the image
     * This function can be improved upon to dynamically determine the mask instead of the current fixed solution
