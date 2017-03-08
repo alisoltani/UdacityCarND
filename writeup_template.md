@@ -6,7 +6,7 @@
 
 My pipline consists of the following steps:
 * First I convert images to grayscale
-* Then apply Gaussian blurring on the image to reduce noise in the image. I use a kernal size of 3.
+[image1]: ./examples/grayscale.jpg "Grayscale"* Then apply Gaussian blurring on the image to reduce noise in the image. I use a kernal size of 3.
 * The next step I detect the edges in the image using Canny, with a low threshold of 60 and a high of 130.
 * A mask is applied to the detected edges. Currently I am using a fixed mask with vertices at [450,320], [530, 320], and the two edges of the image
     * This function can be improved upon to dynamically determine the mask instead of the current fixed solution
@@ -16,8 +16,6 @@ My pipline consists of the following steps:
 * Once the left and right lines are seperated, each line is extrapolated using the slope at the mean point of the left/right lines, and the top of the mask as the intercept point. The lines are drawn down to the bottom of the image.
     * This functionality can be improved upon, and should not be so heavily dependent on the mean.
 * Finally, the images are superimposed onto the main image.
-
-![alt text][image1]
 
 
 ###2. Identify potential shortcomings with your current pipeline
